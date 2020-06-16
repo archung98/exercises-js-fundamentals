@@ -19,7 +19,7 @@
  * @param {number} num - The number
  * @returns {boolean} True if the number is a power of 2, false otherwise.
  */
-powerOfTwoCheck = false;
+ var powerOfTwoCheck = false;
 function isPowerOfTwo(num) {
   if (num === 2 || num === 1) {
     powerOfTwoCheck = true

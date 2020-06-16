@@ -33,8 +33,8 @@ function countLetter(string, letter) {
 
 if (require.main === module) {
   console.log('Running sanity checks for countLetter:');
-  console.log(countLetter("hello","l"))
-  console.log(countLetter("this is a sentence","e"))
+  console.log(countLetter("hello","l")=== 2)
+  console.log(countLetter("this is a sentence","e") === 3)
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
 }

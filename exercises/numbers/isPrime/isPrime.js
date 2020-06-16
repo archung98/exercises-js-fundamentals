@@ -35,12 +35,12 @@ if (require.main === module) {
   console.log('Running sanity checks for isPrime:');
 
   console.log(isPrime(1) === false);
-  console.log(isPrime(2) === true);
-  console.log(isPrime(4) === false);
+  // console.log(isPrime(2) === true);
+  // console.log(isPrime(4) === false);
 
-  // Your own sanity checks go here
-  console.log(isPrime(7) === true);
-  console.log(isPrime(-1) === false);
+  // // Your own sanity checks go here
+  // console.log(isPrime(7) === true);
+  // console.log(isPrime(-1) === false);
 }
 
 module.exports = isPrime;

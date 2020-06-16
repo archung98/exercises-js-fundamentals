@@ -14,12 +14,51 @@
  * @return {string} The corresponding letter grade for the given percentage grade
  */
 function letterGrade(percentGrade) {
-  // This is your job. :)
+  if (percentGrade > 92 ){
+    return 'A'
+  }
+  else if (percentGrade >= 90 && percentGrade <=92){
+    return 'A-'
+  }
+  else if (percentGrade >= 87 && percentGrade <= 89){
+    return 'B+'
+  }
+  else if (percentGrade >= 83 && percentGrade<= 86) {
+    return 'B'
+  }
+  else if (percentGrade >= 80 && percentGrade <= 82){
+    return 'B-'
+  }
+  else if (percentGrade >= 77 && percentGrade <= 79){
+    return 'C+'
+  }
+  else if (percentGrade >= 73 && percentGrade <= 76){
+    return 'C'
+  }
+  else if (percentGrade >= 70 && percentGrade<= 72) {
+    return 'C-'
+  }
+  else if (percentGrade >= 67 && percentGrade <= 69){
+    return 'D+'
+  }
+  else if (percentGrade >= 63 && percentGrade <= 66){
+    return 'D'
+  }
+  else if (percentGrade >= 60 && percentGrade<= 62) {
+    return 'D-'
+  }
+  else if (percentGrade < 60){
+    return 'F'
+  }
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for letterGrade:');
-
+  console.log(letterGrade(87) === 'B+');
+  console.log(letterGrade(95) === 'A');
+  console.log(letterGrade(43) === 'F');
+  console.log(letterGrade(65) === 'D');
+  console.log(letterGrade(78) === 'C+');
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
 }
