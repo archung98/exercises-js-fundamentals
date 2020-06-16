@@ -8,6 +8,20 @@
  * @returns {boolean} True if a triangle exists with side lengths of a, b, and c. Returns false otherwise.
  */
 function isValidTriangle(a, b, c) {
+  let angle1 = Math.acos( (b**2 + c**2 - a**2)/(2*b*c))
+  let angle2 = Math.acos( (a**2 + c**2 - b**2)/(2*a*c))
+  let angle3 = Math.acos( (a**2 + b**2 - c**2)/(2*a*b))
+  let sumAngle =  Math.round(((angle1 +angle2+angle3) + Number.EPSILON) * 100) / 100 
+  if (sumAngle === 3.14){
+    return true
+  } else {
+    return false
+  }
+  
+
+  
+  
+
   /*
     Before you go Googling, get out a piece of paper and draw some triangles.
 
@@ -32,6 +46,9 @@ if (require.main === module) {
   console.log(isValidTriangle(5, 3, 4) === true);
   console.log(isValidTriangle(5, 4, 3) === true);
 
+  console.log(isValidTriangle(6, 1, 5))// === false);
+  console.log(isValidTriangle(1, 1, 1))//=== false);
+  console.log(isValidTriangle(7, 3, 5)) //=== false);
   // Add your own sanity checks here. Test negative cases.
   // How else will you be sure your code does what you think it does?
 }
