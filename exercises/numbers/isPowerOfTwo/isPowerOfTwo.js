@@ -19,16 +19,18 @@
  * @param {number} num - The number
  * @returns {boolean} True if the number is a power of 2, false otherwise.
  */
-
+powerOfTwoCheck = false;
 function isPowerOfTwo(num) {
   if (num === 2 || num === 1) {
-    return true
+    powerOfTwoCheck = true
+    return powerOfTwoCheck
   }
-
   while (num > 2) {
-    return true || isPowerOfTwo(Math.floor(num/2))
+    //console.log(isPowerOfTwo(Math.floor(num/2)))
+    powerOfTwoCheck = false
+    return  isPowerOfTwo(num/2)
   }
-  return false
+  return powerOfTwoCheck
 
   // Your code here
   // Remember, you can assume that num is a positive integer.
@@ -44,7 +46,7 @@ if (require.main === module) {
   console.log(isPowerOfTwo(2) === true);
   console.log(isPowerOfTwo(7) === false);
   console.log(isPowerOfTwo(4) === true);
-  console.log(isPowerOfTwo(16) === true)
+  console.log(isPowerOfTwo(16) === true);
 
   // Your sanity checks here.
   console.log(isPowerOfTwo(21) === false);
