@@ -15,12 +15,27 @@
  *   greater than the mean.
  */
 function selectAboveMean(array) {
+  let sum = 0
+  let aboveMeanLs = []
+   for (i of array){
+     sum += i
+   }
+   let average = sum / array.length
+   for (i of array){
+    if (i > average){
+      aboveMeanLs.push(i)
+    }
+  }
+  return aboveMeanLs
   // This is your job. :)
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for selectAboveMean:');
-
+  console.log(selectAboveMean([1, 1, 1])); // => []
+  console.log(selectAboveMean([-10, -10, 0, 10])); // => [0, 10]
+  console.log(selectAboveMean([1, 2, 3, 4, 5])); // => [4, 5]
+  console.log(selectAboveMean([100, 0, 100, 200, 100, 0])); 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
 }
