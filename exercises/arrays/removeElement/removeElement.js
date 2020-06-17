@@ -15,11 +15,21 @@
  */
 function removeElement(array, element) {
   // This is your job. :)
+  let removedArray = []
+  for (i of array){
+    if (i !== element){
+      removedArray.push(i)
+    }
+  }
+  return removedArray
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for removeElement:');
-
+  console.log(removeElement([1, 1, 1], 1)); // => []
+  console.log(removeElement([1, 2, 1], 1)); // => [2]
+  console.log(removeElement(['one', 'two', 'three'], 'two')); // => ['one', 'three']
+  console.log(removeElement(['Jesse', undefined, 'Farmer'], undefined));
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
 }
